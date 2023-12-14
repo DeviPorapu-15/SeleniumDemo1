@@ -17,7 +17,7 @@ public class TestNGGoogle {
 public void pageSetUp() {
 		driver = new ChromeDriver();
 	driver.manage().window().maximize();
-	driver.manage().timeouts().implicitlyWait(Duration .ofSeconds(50));
+	driver.manage().timeouts().implicitlyWait(Duration .ofSeconds(20));
 }
   @Test(alwaysRun = true, dependsOnMethods ="SeleniumTutorial")
   public void JavaTutorial() {
@@ -41,8 +41,9 @@ public void pageSetUp() {
 	  driver.get("https://www.google.com");
 	  WebElement srcBox = driver.findElement(By.className("gLFyf"));
 	  srcBox.sendKeys("CypressTutorial");
+	  srcBox.submit();
 	  Assert.assertEquals(driver.getTitle(), "CypressTutorial - Google Search");
-	  srcBox.submit(); 
+	   
   }
   @Test(enabled=false)
   public void AppiumTutorial() {

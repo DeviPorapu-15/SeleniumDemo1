@@ -1,4 +1,4 @@
-package TestScripts;
+package paralleltest;
 
 import java.time.Duration;
 
