@@ -19,21 +19,22 @@ public void pageSetUp() {
 	driver.manage().window().maximize();
 	driver.manage().timeouts().implicitlyWait(Duration .ofSeconds(50));
 }
-  @Test(dependsOnMethods ="SeleniumTutorial")
+  @Test(alwaysRun = true, dependsOnMethods ="SeleniumTutorial")
   public void JavaTutorial() {
 	  driver.get("https://www.google.com");
 	  WebElement srcBox = driver.findElement(By.className("gLFyf"));
 	  srcBox.sendKeys("JavaTutorial");
-	  Assert.assertEquals(driver.getTitle(), "JavaTutorial - Google");
 	  srcBox.submit(); 
+	  Assert.assertEquals(driver.getTitle(), "JavaTutorial - Google Search");
+	  
   }
   @Test
   public void SeleniumTutorial() {
 	  driver.get("https://www.google.com");
 	  WebElement srcBox = driver.findElement(By.className("gLFyf"));
 	  srcBox.sendKeys("SeleniumTutorial");
-	  Assert.assertEquals(driver.getTitle(), "SeleniumTutorial - Google");
-	  srcBox.submit(); 
+	  srcBox.submit();
+	  Assert.assertEquals(driver.getTitle(), "SeleniumTutorial - Google Search Page"); 
   }
   @Test(enabled=false)
   public void CypressSearchTutorial() {
@@ -48,8 +49,9 @@ public void pageSetUp() {
 	  driver.get("https://www.google.com");
 	  WebElement srcBox = driver.findElement(By.className("gLFyf"));
 	  srcBox.sendKeys("AppiumTutorial");
+	  srcBox.submit();
 	  Assert.assertEquals(driver.getTitle(), "AppiumTutorial - Google Search");
-	  srcBox.submit(); 
+	   
   }
   @AfterMethod
   public void teardown() {
