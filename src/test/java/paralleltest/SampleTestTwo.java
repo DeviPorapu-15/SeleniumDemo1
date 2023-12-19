@@ -14,16 +14,16 @@ public class SampleTestTwo {
 	@Test
 	public void testOne() {
 		long id = Thread.currentThread().getId();
-		System.out.println("Test21 in SampleOne....."+id);
+		System.out.println("Test21 in SampleTwo....."+id);
 	}
 	@Test
 	public void testTwo() {
 		long id = Thread.currentThread().getId();
-		System.out.println("Test22 in SampleOne....."+id);
+		System.out.println("Test22 in SampleTwo....."+id);
 	}
 	@Test
 	public void testThree() {
 		long id = Thread.currentThread().getId();
-		System.out.println("Test23 in SampleOne....."+id);
+		System.out.println("Test23 in SampleTwo....."+id);
 	}
 }

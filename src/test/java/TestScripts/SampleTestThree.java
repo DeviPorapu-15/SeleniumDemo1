@@ -19,7 +19,7 @@ public void testone() {
 public void testtwo() {
 	System.out.println("Test32 is in Sample three");
 }
-@Test(groups="feature1")
+@Test(groups="feature3")
 public void testthree() {
 	System.out.println("Test33 is in Sample three");
 }
